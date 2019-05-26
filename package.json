@@ -1,0 +1,31 @@
+{
+  "name": "tilt-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "dev-server": "node ./server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.0.0",
+    "firebase": "^6.0.4",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "numeral": "^2.0.6",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "recharts": "^1.6.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  }
+}

@@ -1,0 +1,237 @@
+.glass {
+    width: 50px;
+    height: 50px;
+    border: solid 3.5px white;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+    -webkit-animation: glass 10s infinite
+}
+  
+.glass__liquid {
+    width: 40px;
+    height: 45px;
+    background: transparent;
+    position: absolute;
+    left: 1px;
+    top: 0px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        width: 230px;
+        height: 230px;
+        background: #e8b504;
+        position: absolute;
+        top: 63px;
+        left: -180px;
+        transform: rotate(40deg);
+        -webkit-animation: liquid 10s infinite;
+    }
+}
+
+.glass__handle {
+    width: 20px;
+    height: 32px;
+    background: transparent;
+    border: solid 3.5px white;
+    position: absolute;
+    top: 8px;
+    left: 94px;
+    border-radius: 0 16px 16px 0;
+    border-left: none;
+    transform: rotate(-20deg);
+    -webkit-animation: handle 10s infinite;
+}
+
+.foam__1 {
+    position: absolute;
+    top: 8px;
+    left: 46px;
+    z-index: 4;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: foam 10s infinite;
+    }
+
+    &::after {
+        content: "";
+        width: 17px;
+        height: 17px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        -webkit-animation: foam 10s infinite;
+    }
+}
+
+.foam__2 {
+    position: absolute;
+    top: 8px;
+    left: 60px;
+    z-index: 4;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: foam 10s infinite;
+    }
+
+    &::after {
+        content: "";
+        width: 17px;
+        height: 17px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        -webkit-animation: foam 10s infinite;
+    }
+}
+
+.foam__3 {
+    position: absolute;
+    top: 8px;
+    left: 75px;
+    z-index: 4;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: foam 10s infinite;
+    }
+
+    &::after {
+        content: "";
+        width: 17px;
+        height: 17px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        -webkit-animation: foam 10s infinite;
+    }
+}
+
+.foam__mist {
+    position: absolute;
+    top: 4px;
+    left: 50px;
+    z-index: 4;
+
+    &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: mist 10s infinite;
+    }
+
+    &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        left: 40px;
+        -webkit-animation: mist 10s infinite;
+    }
+}
+
+// Animations
+@-webkit-keyframes glass {
+    0% {
+        transform: rotate(-20deg);
+    }
+    17% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes liquid {
+    0% {
+        transform: translateY(-5);
+    }
+    17% {
+        transform: translateY(-62px);
+    }
+    100% {
+        transform: translateY(-62px);
+    }
+}
+
+@-webkit-keyframes handle {
+    0% {
+        transform: rotate(-20deg);
+    }
+    17% {
+        transform: rotate(0deg) translateX(5px) translateY(20px);
+    }
+    100% {
+        transform: rotate(0deg) translateX(5px) translateY(20px);
+    }
+}
+
+@-webkit-keyframes foam {
+    0%{
+        transform: scale(0);
+    } 
+    10%{
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1)
+    }
+    100% {
+
+    }
+}
+
+@-webkit-keyframes mist {
+    0% {
+        transform: scale(0) translateY(0px);
+    }
+    10% {
+        transform: scale(0) translateY(0px);
+    }
+    20% {
+        transform: scale(1) translateY(-20px);
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(-80px);
+        opacity: 0;
+    }
+}
