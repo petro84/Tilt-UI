@@ -45,7 +45,7 @@ class Details extends Component {
                                 <DetailedCard title='Original Gravity (OG)' data={this.props.beacons[0].gravity} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <DetailedCard title='Current Temp' data={`${this.props.beacons[0].temp}° F`} />
+                                <DetailedCard title='Current Temp' data={`${this.props.beacons[this.props.beacons.length - 1].temp}° F`} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <DetailedCard title='Alcohol by Volume (ABV)' data={numeral((this.props.beacons[0].gravity - this.props.beacons[this.props.beacons.length -1].gravity) * 1.13125).format('0.00%')} />
