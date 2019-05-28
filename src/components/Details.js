@@ -39,10 +39,10 @@ class Details extends Component {
                     <Grid container justify='flex-end'>
                         <Grid spacing={8} alignItems='center' justify='center' container className={classes.grid}>
                             <Grid item xs={12} sm={6}>
-                                <DetailedCard title='Current Gravity (CG)' data={this.props.beacons[0].gravity} />
+                                <DetailedCard title='Current Gravity (CG)' data={this.props.beacons[this.props.beacons.length - 1].gravity} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <DetailedCard title='Original Gravity (OG)' data={this.props.beacons[this.props.beacons.length - 1].gravity} />
+                                <DetailedCard title='Original Gravity (OG)' data={this.props.beacons[0].gravity} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <DetailedCard title='Current Temp' data={`${this.props.beacons[0].temp}° F`} />
