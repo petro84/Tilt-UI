@@ -1,18 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 import configureStore from './config/configureStore'
 import AppRouter from './config/AppRouter'
 
-import {fetchBeacons} from './actions/beacons'
+import { fetchBeacons } from './actions/beacons'
 import './styles/styles.scss'
 
 const store = configureStore()
 
+const theme = createMuiTheme({
+    typography: {
+        "fontFamily": "\"Gochi Hand\", cursive"
+    }
+})
+
 const jsx = (
     <Provider store={store}>
-        <AppRouter />
+        <MuiThemeProvider theme={theme}>
+            <AppRouter />
+        </MuiThemeProvider>
     </Provider>
 )
 

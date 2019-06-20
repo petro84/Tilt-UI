@@ -28,8 +28,8 @@ const customTooltip = ({active, payload, label}) => {
                 <CartesianGrid vertical={false} strokeDasharray='3 3' />
                 <Tooltip content={customTooltip} />
                 <Legend verticalAlign='top'/>
-                <Line type='monotone' dataKey='gravity' yAxisId='left' stroke='#82ca9d' />
-                <Line type='monotone' dataKey='temp' yAxisId='right' stroke='#8884d8' />
+                <Line type='monotone' dot={false} dataKey='gravity' yAxisId='left' stroke='#58F61E' />
+                <Line type='monotone' dot={false} dataKey='temp' yAxisId='right' stroke='#EB0000' />
             </LineChart>
         </ResponsiveContainer>
     )
